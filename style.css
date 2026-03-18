@@ -1,0 +1,8 @@
+display: grid;
+width: 1280px;
+height: 2133.5px;
+padding: 0 80px;
+row-gap: 10px;
+column-gap: 10px;
+grid-template-rows:      fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) minmax(0,1fr);
+grid-template-columns: repeat(1,minmax(0,1fr));
