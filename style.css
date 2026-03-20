@@ -1,57 +1,72 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding: min(16px, 3%);
 }
 
 body {
   	margin: 0;
   	line-height: normal;
     background-color: #FEF7F1;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: #2B5D24;
 }
 
 div {
-    padding: 0px 80px 0px 80px;
+    padding-left: min(80px, 8%);
+    padding-right: min(80px, 8%);
     height: auto;
 }
 
 a {
     text-decoration: none;
-    color: #F16F33;
+    color: #f16f33;
 }
 
-h1 {
+title {
     position: relative;
-    font-size: 42px;
+    font-size: clamp(1.8rem, 3vw, 5rem);
     font-weight: 600;
     font-family: 'Playfair Display';
     color: #f16f33;
     text-align: center;
 }
 
+h1 {
+    position: relative;
+    font-size: clamp(1.2rem, 1.5vw, 3rem);
+    font-weight: 500;
+    font-family: Inter;
+    color: #595880;
+}
+
 h2 {
     position: relative;
-    font-size: 24px;
+    font-size: clamp(1.2rem, 1.5vw, 3rem);
     font-weight: 500;
     font-family: Inter;
     color: #595880;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    margin: 40px 0px 50px 0px;
-    padding: 80px 80px 80px 80px;
+    margin: 20px 0px 20px 0px;
+    padding: min(80px, 8%) min(80px, 8%) min(80px, 8%) min(80px, 8%);
     align-items: center;
     justify-items: center;
+    vertical-align: middle;
     text-align: center;
 }
 
 .container.grid {
     margin: 0px 0px 0px 0px;
     display: grid;
-    padding: 10px 80px 10px 80px;
+    padding: min(10px, 5%) min(80px, 8%) min(10px, 5%) min(80px, 8%);
     align-items: center;
     text-align: left;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -75,6 +90,11 @@ h2 {
     background-color: lightgray;
 }
 
+.grid-item:hover {
+    transform: scale(1.015);
+    transition: 0.3s;
+}
+
 
 .navbar {
     overflow: visible;
@@ -82,7 +102,7 @@ h2 {
     box-sizing: border-box;
     width: 100%;
     grid-template-columns: auto 60px 60px 60px 1fr auto auto;
-    padding: 20px 80px 20px 80px;
+    padding: min(20px, 5%) min(80px, 8%) min(20px, 5%) min(80px, 8%);
     align-content: start;
     column-gap: 15px;
     font-size: 16px;
@@ -96,6 +116,44 @@ h2 {
 
 }
 
+.sidenav {
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    width: 20%;
+    margin-left: min(80px, 8%);
+    padding: min(80px, 8%) 0 min(80px, 8%) 0;
+    text-align: left;
+}
+
+.sidenav-text {
+    font-size: 16px;
+    font-weight: 0;
+    color: #CBCBE7;
+    line-height: 3;
+}
+
+.sidenav-text:hover {
+    color: #A7A7EA;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+    height: 100%;
+    margin-left: 20%;
+    margin-right: min(80px, 8%);
+    padding: min(80px, 8%) 0 min(80px, 8%) 0;
+    text-align: left;
+}
+
 .logo {
     position: relative;
     font-size: 24px;
@@ -105,26 +163,53 @@ h2 {
     text-align: center;
 }
 
+.logo:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.navtext {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.navtext:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
 .navicons {
     width: auto;
     height: 24px;
     filter: invert(62%) sepia(88%) saturate(3204%) hue-rotate(339deg) brightness(97%) contrast(94%);
 }
 
+.navicons:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+
 .name {
     position: relative;
-    font-size: 128px;
+    font-size: clamp(3rem, 7vw, 10rem);
     font-weight: 900;
     font-family: 'Playfair Display';
     color: #f16f33;
     text-align: center;
+    margin: 10px 0px 32px 0px;
 }
 
 .body1 {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
     position: relative;
-    font-size: 18px;
+    font-size: clamp(1rem, 1.3vw, 3rem);
     font-weight: 500;
     color: #2B5D24;
+    line-height: 1.5;
 }
 
 .button {
@@ -133,4 +218,13 @@ h2 {
     border-radius: 25px;
     padding: 10px 20px 10px 20px;
     font-size: 16px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.button:hover {
+    background-color: #f16f33;
+    color: white;
+    transform: scale(1.02);
+    transition: 0.3s;
 }
