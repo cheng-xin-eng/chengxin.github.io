@@ -23,7 +23,7 @@ a {
     color: #f16f33;
 }
 
-title {
+h1 {
     position: relative;
     font-size: clamp(1.8rem, 3vw, 5rem);
     font-weight: 600;
@@ -32,7 +32,7 @@ title {
     text-align: center;
 }
 
-h1 {
+h2 {
     position: relative;
     font-size: clamp(1.2rem, 1.5vw, 3rem);
     font-weight: 500;
@@ -40,9 +40,9 @@ h1 {
     color: #595880;
 }
 
-h2 {
+h3 {
     position: relative;
-    font-size: clamp(1.2rem, 1.5vw, 3rem);
+    font-size: clamp(1.2rem, 1.2vw, 3rem);
     font-weight: 500;
     font-family: Inter;
     color: #595880;
