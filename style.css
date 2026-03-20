@@ -34,7 +34,7 @@ h1 {
 
 h2 {
     position: relative;
-    font-size: clamp(1.2rem, 1.5vw, 3rem);
+    font-size: clamp(1.2rem, 1.8vw, 3rem);
     font-weight: 500;
     font-family: Inter;
     color: #595880;
@@ -42,7 +42,7 @@ h2 {
 
 h3 {
     position: relative;
-    font-size: clamp(1.2rem, 1.2vw, 3rem);
+    font-size: clamp(1.2rem, 1.5vw, 3rem);
     font-weight: 500;
     font-family: Inter;
     color: #595880;
@@ -125,6 +125,12 @@ h3 {
     margin-left: min(80px, 8%);
     padding: min(80px, 8%) 0 min(80px, 8%) 0;
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    .sidenav {
+        display: none;
+    }
 }
 
 .sidenav-text {
